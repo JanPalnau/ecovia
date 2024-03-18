@@ -1,0 +1,23 @@
+List<String> showCaseLabels = [
+  'Im Home-Tab findest du die Babykuh "Lea", die dir Feedback zu deiner Ernährung gibt.',
+  'Der Umwelt-Tab liefert dir täglich neue Informationen rundum die umweltfreundliche Ernährung!',
+  'Hier kannst du persönliche Ernährungsziele formulieren.',
+  'Du suchst Rezepte & Tipps wie du tierische Produkte ersetzen kannst? Hier findest du sie.',
+  'Fülle hier dein tägliches Ernährungsprotokoll aus.',
+  'Basierend auf deinem Ernährungsprotokoll wird dir hier dein durch die Ernährung verursachter CO₂-Verbrauch angezeigt.',
+  'Lea gibt dir nicht nur Feedback zu deiner Ernährung, sondern wächst auch, wenn du dich umweltfreundlich ernährst.',
+  'Senke deinen CO₂-Fußabdruck, um Leas Lebensort gedeihen zu lassen.',
+  'Tägliche Informationen zu umweltfreundlicher Ernährung findest du hier.',
+  'Detailliertere Beiträge zur umweltfreundlichen Ernährung werden dir angezeigt.',
+  'Du bist besonders interessiert? Suche nach spezifischen Themen.',
+  'Formuliere Ernährungsziele, um dich in deinem Tempo umzustellen.',
+  'Erledigte Ernährungsziele findest du hier.',
+  'Täglich werden dir 3 neue Rezepte vorgeschlagen. Viel Spaß bei der Zubereitung!',
+  'Sieh dir Rezepte an und deine Favoriten, um sie später wiederzufinden.',
+  'Du bist mal wieder unterwegs und suchst nach pflanzlicher, umweltfreundlicher Kost? Here you go.',
+  'Stöbere durch unsere Rezepte und lass dich kulinarisch inspirieren.',
+  'Hier lernst du, wie du einzelne Zutaten pflanzlich ersetzen kannst.',
+  'Beantworte das 5-minütige Ernährungsprotokoll jeden Tag - am besten abends.',
+  'Deine tägliche und wöchentliche ernährungsbasierte CO₂-Bilanz sowie dessen Verlauf trackt dein Fortschritt und liefert dir Einblicke in dein Ernährungsverhalten.',
+  'Verdiene EcoPoints, indem du die pflanzlicher ernährst und deine Zielsetzungen erreichst!'
+];
