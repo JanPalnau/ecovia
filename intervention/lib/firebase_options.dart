@@ -3,17 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
-
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
+`
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -50,20 +40,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCWu9fRxzBL95V3_i7VTuI0OBf9o8dpFno',
-    appId: '1:749174894848:android:38bf71a7321321c74c03e5',
-    messagingSenderId: '749174894848',
-    projectId: 'ecovia-c741e',
-    storageBucket: 'ecovia-c741e.appspot.com',
+    apiKey: 'apiKey',
+    appId: 'appId',
+    messagingSenderId: 'messagingSenderId',
+    projectId: 'projectId',
+    storageBucket: 'storageBucket',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCVWXv-MKY2j2g9jDlo4BKs_CN90UaaVq4',
-    appId: '1:749174894848:ios:7556514afb3dc74c4c03e5',
-    messagingSenderId: '749174894848',
-    projectId: 'ecovia-c741e',
-    storageBucket: 'ecovia-c741e.appspot.com',
-    iosClientId: '749174894848-ukmv222hr8a3mgcijbe5uhme3ke56p4t.apps.googleusercontent.com',
-    iosBundleId: 'com.example.ecovia',
+    apiKey: 'apiKey',
+    appId: 'appId',
+    messagingSenderId: 'messagingSenderId',
+    projectId: 'projectId',
+    storageBucket: 'storageBucket',
+    iosClientId: 'iosClientId',
+    iosBundleId: 'iosBundleId',
   );
 }
