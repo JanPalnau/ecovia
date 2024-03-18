@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1003810122821-j62gnj3m81lpjc2tl0b1v1jh0j55abkq.apps.googleusercontent.com</string>
+	<string>CLIENT_ID</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1003810122821-j62gnj3m81lpjc2tl0b1v1jh0j55abkq</string>
+	<string>REVERSED_CLIENT_ID</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBk5qHvGuOoAoMaw-XYoNe-yU2j07HEs9Y</string>
+	<string>API_KEY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1003810122821</string>
+	<string>GCM_SENDER_ID</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.myco2app.firebaseAuthExample</string>
+	<string>BUNDLE_IDe</string>
 	<key>PROJECT_ID</key>
-	<string>co2-app-a291d</string>
+	<string>PROJECT_ID</string>
 	<key>STORAGE_BUCKET</key>
-	<string>co2-app-a291d.appspot.com</string>
+	<string>STORAGE_BUCKET</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1003810122821:ios:92f46f328d66eb7933472c</string>
+	<string>GOOGLE_APP_ID</string>
 </dict>
 </plist>
