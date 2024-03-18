@@ -34,47 +34,12 @@ import 'JsonObjects/survey_answers_post_data.dart';
 import 'JsonObjects/user_data.dart';
 import 'firebase_options.dart';
 
-// Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-
-//   // If you're going to use other Firebase services in the background, such as Firestore,
-//   // make sure you call `initializeApp` before using other Firebase services.
-//   //await Firebase.initializeApp();
-//   print("Handling a background message: ${message.messageId}");
-// }
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: kIsWeb ? firebaseConfig : DefaultFirebaseOptions.currentPlatform,
   );
 
-//   FirebaseMessaging messaging = FirebaseMessaging.instance;
-//   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
-//   NotificationSettings settings = await messaging.requestPermission(
-//   alert: true,
-//   announcement: false,
-//   badge: true,
-//   carPlay: false,
-//   criticalAlert: false,
-//   provisional: false,
-//   sound: true,
-// );
-
-// print('User granted permission: ${settings.authorizationStatus}');
-
-// String? token = await messaging.getToken(
-//    vapidKey: "BHZGqPAfuBNO97WzfO281i7w-uuPe75JRzxdcsoNSTMVVqJCbAXKqWnb6RlzwhxMwxlREnEU8E76542fejQIg7Y",
-
-//  );
-// print(token);
-// FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-//   print('Got a message whilst in the foreground!');
-//   print('Message data: ${message.data}');
-
-//   if (message.notification != null) {
-//     print('Message also contained a notification: ${message.notification}');
-//   }
-// });
 
   runApp(const StateContainer(child: RestartWidget(child: MyApp())));
 }
@@ -99,26 +64,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  // void didChangeDependencies() {
-  //   for (var recipe in RecipeCatalog().recipes) {
-  //     //if(int.parse(recipe.id!) < 50) {
-  //     precacheImage(AssetImage(recipe.imgSrc!), context);
-  //     //}
-
-  //   }
-  //   for (var image in backgroundImageList) {
-  //       precacheImage(image, context);
-  //     }
-
-  //     for (var image in paulaImageList) {
-  //       precacheImage(image, context);
-  //     }
-  //   precacheImage(ecoviaIcon, context);
-  //     precacheImage(ecoviaIconWithText, context);
-  //   super.didChangeDependencies();
-  // }
-
-  @override
   Widget build(BuildContext context) {
     bool isDesktopWeb = (kIsWeb &&
         (Theme.of(context).platform == TargetPlatform.macOS ||
@@ -127,75 +72,6 @@ class _MyAppState extends State<MyApp> {
     bool isMobileNotWeb = (!kIsWeb &&
         (Theme.of(context).platform == TargetPlatform.android ||
             Theme.of(context).platform == TargetPlatform.iOS));
-
-    // final List<int> recipeIDs = [for (var i = 0; i < 208; i += 1) i];
-    // FirebaseAuth.instance.signOut();
-    //   userReference.set({
-    //     'recipeIDs': recipeIDs,
-    //   }, SetOptions(merge: true));
-
-
-    // userReference.set({
-    //       //  'recipeIDs':
-    //       //    [recipeIDs]
-    //       //,
-    //       'paulaTextReceived': true,
-    //       'followUpCompleted': false,
-    //       'dietType': 0,
-    //       'pushNotificationsEnabled': true,
-    //       'completionStatus': false,
-    //       'completionDaily': false,
-    //       'preQuestionnaireFinished': false,
-    //       'currentPaula': 1,
-    //       'currentBackground': 3,
-    //       'registerDate': '',
-    //       'studyCompleted': false,
-    //       'loginDate': '',
-    //       'loginDateSubmitted': false,
-    //       'paulaStatementsInitial': false,
-    //       'isFirstLaunch': true,
-    //       'dailyRecipesGenerated': false,
-    //       'dailyRecipes': {'recipeOne': 0, 'recipeTwo': 1, 'recipeThree': 2},
-    //       'feedbackReceived': false,
-    //       'ecoPoints': 0,
-    //       'ecoPointsReceived': true,
-    //       'updatedBackground': false,
-    //     }, SetOptions(merge: true));
-
-
-
-    //FirebaseAuth.instance.signOut();
-    // for (var recipe in RecipeCatalog().recipes) {
-    //    //recipeMap[recipe.id] = recipe.isFavorized;
-    //    favoriteRecipesReference.doc(recipe.id!).set({'id': int.parse(recipe.id!), 'isFavorized': false});
-    //    //favoriteRecipesReference.set({'${recipe.id}' : recipe.isFavorized}, SetOptions(merge: true));
-    // }
-    //final Stream<QuerySnapshot> surveyAnswerStream = FirebaseFirestore.instance
-    //  .collection("users")
-    //  .doc(FirebaseAuth.instance.currentUser.uid)
-    //  .collection('surveyAnswers')
-    //  .orderBy('date', descending: true)
-    //  .snapshots();
-    // List<bool> favoriteRecipesList = [];
-
-    // for (int i = 0; i < 209; i++) {
-    //   favoriteRecipesList.add(false);
-    // }
-
-    // recipeDataReference.set({'favoriteRecipes': favoriteRecipesList});
-    //  for (var recipe in RecipeCatalog().recipes) {
-    //    favoriteRecipesReference.doc(recipe.id!).set({recipe.id! : false});
-    // }
-    // final List<int> recipeIDs = [];
-    // for (var element in RecipeCatalog().recipes) {
-    //   recipeIDs.add((int.parse(element.id!)));
-    // }
-    //FirebaseAuth.instance.signOut();
-    // userReference.set({
-    //   'recipeIDs': {
-    //     [recipeIDs]
-    //   },
-    // });
     List<FavoriteRecipe> favoriteRecipes = [];
     for (var recipe in RecipeCatalog().recipes) {
       favoriteRecipes
@@ -230,12 +106,6 @@ class _MyAppState extends State<MyApp> {
           create: (context) => DietGoalsStream().fetchDietGoalsData(),
           initialData: const [],
         ),
-        // StreamProvider<DocumentSnapshot?>(
-        //   create: (context) =>
-        //       favoriteRecipeStream,
-        //   initialData: null,
-        //   catchError: ,
-        // ),
         StreamProvider<UserData>(
           create: (context) => UserDataStream().fetchUserData(),
 
@@ -262,55 +132,10 @@ class _MyAppState extends State<MyApp> {
               null,
               null,
               null),
-          // const UserData(
-          //     1,
-          //     1,
-          //     '2022-08-16',
-          //     false,
-          //     false,
-          //     false,
-          //     false,
-          //     false,
-          //     false,
-          //     false,
-          //     true,
-          //     false,
-          //     {'recipeOne': 0, 'recipeTwo': 1, 'recipeThree': 2},
-          //     false,
-          //     [0],
-          //     true,
-          //     0,
-          //     0,
-          //     true),
         ),
-        //StreamProvider<RecipeData>(create: (context) => RecipeDataStream().fetchRecipeData(), initialData: RecipeData(favoriteRecipesList))
-        // StreamProvider<RecipeData>(create: (context) => RecipeDataStream().fetchFavoriteRecipesData(), initialData: RecipeData(favoriteRecipes: {}))
-        //StreamProvider<QuerySnapshot>.value(
-        //  initialData: null,
-        //value: surveyAnswerStream,
-        //child: StreamBuilder<QuerySnapshot>(
-        //stream: surveyAnswerStream,
-        //builder:
-        // ignore: missing_return
-        //    (context, snapshot) {
-        //    if (snapshot.hasError) {
-        //    return Text("Etwas ist schiefgelaufen: ${snapshot.error}");
-        //}
-        // if (snapshot.connectionState == ConnectionState.waiting) {
-        // return Center(
-        // child: CircularProgressIndicator(color: kLightGreen),
-        //);
-        // }
-        // }
-        // )
-        // )
       ],
       child: MultiProvider(
         providers: [
-          // ChangeNotifierProvider(
-          //   create: (context) => NavItems(),
-          // ),
-
           ChangeNotifierProvider(
             create: (context) => ApplicationBloc(),
           ),
@@ -379,10 +204,6 @@ class _MyAppState extends State<MyApp> {
                               MediaQuery.of(context).size.shortestSide > 600
                           ? 200
                           : double.infinity,
-                      //   breakpoints: [
-                      //     ResponsiveBreakpoint.autoScale(800, name: TABLET),
-                      //     ResponsiveBreakpoint.resize(1000, name: DESKTOP),
-                      // ],
                       background: Container(color: kNeonGreen))
                   : Scaffold(
                       body: Stack(
@@ -488,9 +309,6 @@ class AuthenticationWrapper extends StatelessWidget {
   const AuthenticationWrapper({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // final firebaseUser = context.watch<User?>();
-    // final container = StateContainer.of(context);
-    // if (firebaseUser != null) {
     return StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, userSnapshot) {
